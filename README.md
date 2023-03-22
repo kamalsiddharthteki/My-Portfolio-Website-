@@ -1,1 +1,0 @@
-# kamalsiddharthteki.github.io
