@@ -195,8 +195,17 @@ html{
 #pic img{
     width: 575px;
     height:500px;
-    padding-bottom: 60px;
+    /* padding-bottom: 60px; */
     filter: grayscale(100%);
+    margin-bottom: 80px;
+}
+
+#pic img:hover{
+    filter:none;
+    box-shadow: 0 0 30px 5px rgb(48, 0, 87);
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
 }
 
 /* Description from About Me section */
@@ -287,6 +296,7 @@ html{
     flex-wrap: wrap;
     gap: 100px;
     justify-content: center;
+    margin-bottom:22px;
 }
 
 /* HTML icon configuration in skills sub-section */
@@ -408,7 +418,7 @@ html{
 .row{
     display: flex;
     justify-content: space-evenly;
-    margin-bottom:130px;
+    /* margin-bottom:150px; */
     flex-wrap: wrap;
 }
 
@@ -457,8 +467,9 @@ html{
 
 .projectbutton{
     position: relative;
-    padding: 10px 20px;
-    border-radius: 30px;
+    padding: 4px 5px;
+    align-items: center;
+    border-radius: 100px;
     border: 1px solid #2c006d;
     font-size: 14px;
     text-transform: uppercase;
@@ -471,9 +482,16 @@ html{
     -webkit-transition: all 0.2s ease-in;
     -moz-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
+    display:inline;
+    float: right;
 }
 
-/* Hovering the button know more from home section */
+.projectbutton img{
+    height:30px;
+    width:30px;
+    align-items: center;
+    color:#2c006d;  
+}
 
 .projectbutton:hover{
     background: #2c006d;
@@ -489,6 +507,7 @@ html{
     -moz-animation: sh02 0.5s 0s linear;
     animation: sh02 0.5s 0s linear;
   }
+
   
 .projectbutton::before {
     content: '';
@@ -656,7 +675,7 @@ html{
 /* Positioning all jobs columnwise in the job container */
 .job1, .job2, .job3, .job4{
     display:flex;
-    
+    margin-bottom:20px;
     justify-content: center;
     align-items: center;
 }
@@ -735,8 +754,9 @@ html{
 /* Button configuration in blog card */
 .blogbutton{
     position: relative;
-    padding: 10px 20px;
-    border-radius: 30px;
+    padding: 4px 5px;
+    align-items: center;
+    border-radius: 100px;
     border: 1px solid #2c006d;
     font-size: 14px;
     text-transform: uppercase;
@@ -749,6 +769,15 @@ html{
     -webkit-transition: all 0.2s ease-in;
     -moz-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
+    display:inline;
+    float: right;
+}
+
+.blogbutton img{
+    height:30px;
+    width:30px;
+    align-items: center;
+    color:#2c006d;  
 }
 
 /* Hovering the button know more from home section */
