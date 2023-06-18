@@ -215,6 +215,7 @@ html{
     flex-direction: column;
     text-align: justify;
     padding: 5px;
+    mix-blend-mode: color-burn;
 }
 
 /* Heading - Name */
@@ -1244,4 +1245,5 @@ input[type=submit]:hover {
     width:40%;
     margin-bottom: 10px;
 }
+
 
