@@ -57,11 +57,46 @@
             <main>
                 <!-- Home Section -->
                 <section id="home">
-                    <div class="main">
-                        <h1 class="headings">Hi there ! <br>Kamal Siddharth Teki <br> here.</h1>
-                        <button class="button" onclick="window.location.href='https://github.com/kamalsiddharthteki/My-Resume/blob/main/Resume%2023.pdf';">know more</button>
+                    <div class="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="dump/coverr.jpeg" alt="picture1">
+                                <div class="carousel-content">
+                                    <h1>Hi there ! <br>Kamal <span class="one">Siddharth Teki</span> <br> here.</h1>
+                                    <button class="carousel-button" onclick="window.location.href='https://github.com/kamalsiddharthteki/My-Resume/blob/main/Resume%2023.pdf';">know more</button>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="dump/cover.jpg" alt="picture2">
+                                <div class="carousel-content">
+                                    <h1>Hi there ! <br>Kamal <span class="two">Siddharth Teki</span> <br> here.</h1>
+                                    <button class="carousel-button" onclick="window.location.href='https://github.com/kamalsiddharthteki/My-Resume/blob/main/Resume%2023.pdf';">know more</button>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="dump/batman.jpeg" alt="picture3">
+                                <div class="carousel-content">
+                                    <h1>Hi there ! <br>Kamal <span class="three">Siddharth Teki</span> <br> here.</h1>
+                                    <button class="carousel-button" onclick="window.location.href='https://github.com/kamalsiddharthteki/My-Resume/blob/main/Resume%2023.pdf';">know more</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
+
+                <script>
+                    (function() {
+                        var carouselItems = document.querySelectorAll('.carousel-item');
+                        var currentSlide = 0;
+                        var slideInterval = setInterval(nextSlide, 3000); // Slide interval of 1 second
+                
+                        function nextSlide() {
+                            carouselItems[currentSlide].classList.remove('active');
+                            currentSlide = (currentSlide + 1) % carouselItems.length;
+                            carouselItems[currentSlide].classList.add('active');
+                        }
+                    })();
+                </script>
     
                 <!-- About Me Section -->
                 <section id="about">

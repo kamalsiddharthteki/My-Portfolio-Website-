@@ -12,7 +12,7 @@ nav{
     background-color: #140031;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 4;
     width: 100%;
     flex-wrap: wrap;
 }
@@ -62,16 +62,63 @@ html{
 }
 
 /* ---------------------------------------------------------- Home section - Configuartion ------------------------------------------------------------------ */
+span.one{
+    color:#b583ff;
+}
+
+span.two{
+    color:rgb(83, 153, 57);
+}
+
+span.three{
+    color: #b12f2f;
+}
+
 #home{
-    display: flex;
-    /* position:relative; */
-    flex-direction: column;
-    color: white;
-    align-items: center;
-    background: url(dump/coverr.jpeg) no-repeat center center/cover;
+    z-index:2;
+    position: relative;
     height: 800px;
     width: 100%;
-    z-index:-1;
+    overflow: hidden;
+    color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Home inner container (main) - configuration */
@@ -83,9 +130,22 @@ html{
     top: 05%;   
 }
 
+.carousel-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position:absolute;
+    top: 20%; 
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
 /* Home section - main heading config */
 
-.headings{
+.carousel-content h1{
     font-size: 4rem;
     text-align: center;
     margin: 40px 0px;
@@ -96,7 +156,7 @@ html{
 }
 
 /* Home section - know more button (resume link) */
-.button{
+.carousel-content .carousel-button{
     position: relative;
     padding: 10px 20px;
     border-radius: 7px;
@@ -109,28 +169,24 @@ html{
     color: #fff;
     overflow: hidden;
     box-shadow: 0 0 0 0 transparent;
-    -webkit-transition: all 0.2s ease-in;
-    -moz-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
 }
 
 /* Hovering the button know more from home section */
 
-.button:hover{
+.carousel-content .carousel-button:hover{
     background: rgb(152, 61, 255);
     box-shadow: 0 0 30px 5px rgb(125, 11, 255);
-    -webkit-transition: all 0.2s ease-out;
-    -moz-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
 }
 
-.button:hover::before {
+.carousel-content .carousel-button:hover::before {
     -webkit-animation: sh02 0.5s 0s linear;
     -moz-animation: sh02 0.5s 0s linear;
     animation: sh02 0.5s 0s linear;
   }
   
-.button::before {
+  .carousel-content .carousel-button::before {
     content: '';
     display: block;
     width: 0px;
@@ -164,7 +220,7 @@ html{
     }
   }
   
-.button:active {
+  .carousel-content .carousel-button:active {
     box-shadow: 0 0 0 0 transparent;
     -webkit-transition: box-shadow 0.2s ease-in;
     -moz-transition: box-shadow 0.2s ease-in;
