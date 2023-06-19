@@ -421,6 +421,8 @@ html{
     justify-content: space-evenly;
     /* margin-bottom:150px; */
     flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 70px;
 }
 
 /* Common class for storing contents of each project card */
@@ -429,24 +431,19 @@ html{
     flex-direction: column;
     width: 350px;
     height:400px;
-    /*border: 2px solid black;*/
-    box-shadow: 1px 1px 10px black;
     margin: 10px;
     align-items: center;
     text-align: justify;
-    border-radius: 20px;
-    padding-top: 30px;
     gap: 30px;
-    background: lavender;
-    background-size: 100% 200%;
-    transition: all .8s;
-    
+    position: relative;
+    perspective: 1000px;
 }
 
 /* Common heading class for all project cards in project section and blogs */
 .headingsbox{
     font-family: 'Open Sans', sans-serif;
     color:#140031;
+    text-align: center;
 }
 
 /* Common config for all paragraphs - project description in project cards */
@@ -455,6 +452,61 @@ html{
     text-align: justify ;
     padding: 0px 20px;
 }
+
+/* Flip card functionality */
+.box-inner{
+    position: relative;
+    width:100%;
+    height:100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.box:hover .box-inner{
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+}
+
+.box-front img, .box-back{
+    position:absolute;
+    width:100%;
+    height:100%;
+    backface-visibility: hidden;
+    border-radius:10px;
+}
+
+.box-front img {
+    width: 350px;
+    height: 400px;
+    box-shadow: 1px 1px 10px black;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.box-back{
+    background-color: lavender;
+    color:#2c006d;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    gap:30px;
+}
+
+.box-back p{
+    color:#000000;
+    text-decoration: none;
+}
+
+.box-content{
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+    align-items: center;
+}
+
 
 /* Common configuration for headings of each project card */
 .headingsproj{
@@ -495,9 +547,8 @@ html{
 }
 
 .projectbutton:hover{
-    background: #2c006d;
+    background: #b583ff;
     color: white;
-    box-shadow: 0 0 30px 5px #2c006d;
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
