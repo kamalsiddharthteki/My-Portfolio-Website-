@@ -71,7 +71,7 @@ span.two{
 }
 
 span.three{
-    color: #b12f2f;
+    color: #c40000;
 }
 
 #home{
@@ -155,7 +155,7 @@ span.three{
     font-family: 'Righteous', cursive;
 }
 
-/* Home section - know more button (resume link) */
+/* Home section - know more button (resume link) -------------------------------------------------------------*/
 .carousel-content .carousel-button{
     position: relative;
     padding: 10px 20px;
@@ -221,6 +221,150 @@ span.three{
   }
   
   .carousel-content .carousel-button:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+}
+
+/* Home section - know more button 2 (resume link) ------------------------------------------------------------------*/
+.carousel-content .carousel-button-two{
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid rgb(40, 123, 55);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    transition: all 0.2s ease-in;
+}
+
+/* Hovering the button 2 know more from home section */
+
+.carousel-content .carousel-button-two:hover{
+    background: rgb(40, 123, 55);
+    box-shadow: 0 0 30px 5px rgb(40, 123, 55);
+    transition: all 0.2s ease-out;
+}
+
+.carousel-content .carousel-button-two:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+  }
+  
+  .carousel-content .carousel-button-two::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+}
+  
+  @keyframes sh02 {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  
+  .carousel-content .carousel-button-two:active {
+    box-shadow: 0 0 0 0 transparent;
+    -webkit-transition: box-shadow 0.2s ease-in;
+    -moz-transition: box-shadow 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
+}
+
+/* Home section - know more button 3 (resume link) ------------------------------------------------------------------*/
+.carousel-content .carousel-button-three{
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: 1px solid #c40000;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: transparent;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 0 0 transparent;
+    transition: all 0.2s ease-in;
+}
+
+/* Hovering the button 3 know more from home section */
+
+.carousel-content .carousel-button-three:hover{
+    background: #c40000;
+    box-shadow: 0 0 30px 5px #c40000;
+    transition: all 0.2s ease-out;
+}
+
+.carousel-content .carousel-button-three:hover::before {
+    -webkit-animation: sh02 0.5s 0s linear;
+    -moz-animation: sh02 0.5s 0s linear;
+    animation: sh02 0.5s 0s linear;
+  }
+  
+  .carousel-content .carousel-button-three::before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+}
+  
+  @keyframes sh02 {
+    from {
+      opacity: 0;
+      left: 0%;
+    }
+  
+    50% {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      left: 100%;
+    }
+  }
+  
+  .carousel-content .carousel-button-three:active {
     box-shadow: 0 0 0 0 transparent;
     -webkit-transition: box-shadow 0.2s ease-in;
     -moz-transition: box-shadow 0.2s ease-in;
@@ -498,7 +642,7 @@ span.three{
 /* Common heading class for all project cards in project section and blogs */
 .headingsbox{
     font-family: 'Open Sans', sans-serif;
-    color:#140031;
+    color:lavender;
     text-align: center;
 }
 
@@ -541,7 +685,8 @@ span.three{
 }
 
 .box-back{
-    background-color: lavender;
+    background-color: rgb(255,255,255,0.06);
+    backdrop-filter: blur(30px);
     color:#2c006d;
     transform: rotateY(180deg);
     display: flex;
@@ -552,7 +697,7 @@ span.three{
 }
 
 .box-back p{
-    color:#000000;
+    color:lavender;
     text-decoration: none;
 }
 
@@ -579,13 +724,13 @@ span.three{
     padding: 4px 5px;
     align-items: center;
     border-radius: 100px;
-    border: 1px solid #2c006d;
+    border: 1px solid lavender;
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 2px;
     background: transparent;
-    color: #2c006d;
+    color: lavender;
     overflow: hidden;
     box-shadow: 0 0 0 0 transparent;
     -webkit-transition: all 0.2s ease-in;
@@ -599,11 +744,12 @@ span.three{
     height:30px;
     width:30px;
     align-items: center;
-    color:#2c006d;  
+    color:lavender;  
 }
 
 .projectbutton:hover{
-    background: #b583ff;
+    background: lavender;
+    mix-blend-mode: multiply;
     color: white;
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
@@ -1156,6 +1302,10 @@ footer i:hover{
 }
 
 @media only screen and (max-width:350px){
+    
+    h1{
+        font-size: 20px;;
+    }
     .row{
         flex-direction: column;
         align-items: center;
@@ -1204,7 +1354,25 @@ footer i:hover{
     }
 }
 
-@media only screen and (max-width:765px){
+@media only screen and (max-width:860px){
+    .carousel-content h1{
+        font-size: 60px;
+    }
+}
+@media only screen and (max-width:800px){
+    #pic{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #pic img{
+        width: 50%;
+        height: 50%;
+        margin-left: 25%;
+    }
+    .carousel-content h1{
+        font-size: 50px;
+    }
     .job1, .job2, .job3, .job4{
         flex-direction: column;
         display: flex;
@@ -1250,6 +1418,18 @@ footer i:hover{
   }
   
   @media screen and (max-width: 600px) {
+    .inlinebox input[type="text"]{
+        width:70%;
+    }
+    #pic img{
+        width: 60%;
+        height: 60%;
+    }
+
+    #intro h2{
+        font-size: 2rem;
+    }
+
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
       float: right;
