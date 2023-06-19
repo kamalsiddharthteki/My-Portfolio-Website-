@@ -932,7 +932,7 @@ html{
     display: flex;
     justify-content: center;
     font-family: 'Chelsea Market', cursive;
-    margin-top:40px;
+    margin:40px 0;
 }
 
 /* Container to contain email and phone together - config */
@@ -1046,6 +1046,10 @@ html{
     margin-bottom:10px;
 }
 
+.contact-top{
+    background-color: white;
+}
+
 /* ----------------------------------------------------------- Footer Section - Configuration ----------------------------------------------------------------- */
 /* Container to contain both paragraph and social links for footer */
 .inner-footer{
@@ -1095,7 +1099,7 @@ footer i:hover{
     text-shadow: whitesmoke 1px 0 10px;
 }
 
-@media only screen and (max-width:500px){
+@media only screen and (max-width:350px){
     .row{
         flex-direction: column;
         align-items: center;
